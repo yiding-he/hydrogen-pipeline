@@ -6,7 +6,7 @@ public interface Stage<C extends Context> {
 
     };
 
-    default PlanResult plan(Plan<C> plan, C context) {
+    default PlanResult plan(C context) {
         return PlanResult.Default;
     };
 

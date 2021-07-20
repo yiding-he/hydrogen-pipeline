@@ -25,7 +25,7 @@ class PipelineTest {
     static class MyStage2 implements Stage<MyContext> {
 
         @Override
-        public PlanResult plan(Plan<MyContext> plan, MyContext context) {
+        public PlanResult plan(MyContext context) {
             return PlanResult.OmitPrevStage;
         }
 

@@ -30,7 +30,7 @@ public class Pipeline<C extends Context> {
         Plan<C> plan = new Plan<>(iterator.next());
         int i = 0;
         do {
-            PlanResult planResult = plan.getStage(i).plan(plan, context);
+            PlanResult planResult = plan.getStage(i).plan(context);
             if (planResult == PlanResult.Default) {
                 plan.addStage(iterator.next());
             }
